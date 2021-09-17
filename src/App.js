@@ -1,6 +1,7 @@
 import { useState } from 'react'; // hook import.
 import { nanoid } from 'nanoid'; // nanoid is a tiny (108 bytes), secure URL-friendly unique string ID generator
 import NotesList from './components/NotesList';
+import Search from './components/Search';
 
 
 const App = () => {
@@ -47,10 +48,21 @@ const App = () => {
     setNotes(newNotes);
   };
 
+  const deleteNote = (id) => {
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
+  };
+   
+
   return (
     <div className="container">
+      <Search />
   {/* the prop passes the data into the NoteList hence the reason for notes={notes} to pull from the useState */}
-      <NotesList notes={notes} handleAddNote={addNote}/> 
+      <NotesList 
+        notes={notes}
+        handleAddNote={addNote}
+        handleDeleteNote={deleteNote}
+      /> 
     </div>
   );
 }

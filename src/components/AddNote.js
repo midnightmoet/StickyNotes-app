@@ -5,6 +5,7 @@ const AddNote = ({ handleAddNote }) => {
     const [noteText, setNoteText] = useState('');
     const characterLimit = 200; //Does not get added to useState since the user cannot change this
 
+    //Good example of doing checks and validations within your app.
     const handleChange = (e) => {
         //this if statement covers so the count for character does not go into the negative numbers but instead stops at 0
         if(characterLimit - e.target.value.length >= 0){
