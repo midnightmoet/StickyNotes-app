@@ -51,7 +51,7 @@ const App = () => {
     if(savedNotes){
       setNotes(savedNotes);
     }
-  }, []);
+  }, []); //the empty array means only run once
 
   // This useEffect is to grab the new notes
   useEffect(() => {
