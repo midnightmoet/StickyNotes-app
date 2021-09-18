@@ -12,18 +12,20 @@ code {
 		'Courier New', monospace;
 }
 
+/* This gives instructions of what the header should be doing */
 .header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
+/* Toggle button */
 .dark-mode {
 	background-color: black;
 }
 
 .dark-mode h1 {
-	color: white;
+	color: lightgray;
 }
 
 .container {
@@ -32,7 +34,7 @@ code {
 	margin-left: auto;
 	padding-right: 15px;
 	padding-left: 15px;
-	min-height: 100vh;
+	min-height: 100vh; 
 }
 
 .notes-list {
@@ -48,6 +50,7 @@ code {
 	background-color:pink;
 }
 
+/* Text box area of the notes, styling */
 textarea {
 	border: none;
 	resize: none;
@@ -58,6 +61,7 @@ textarea:focus {
 	outline: none;
 }
 
+/* Save button styles */
 .save {
 	background-color: #e1e1e1;
 	border: none;
@@ -70,6 +74,7 @@ textarea:focus {
 	cursor: pointer;
 }
 
+/* Note styling */
 .note {
 	background-color: rgb(50, 124, 148);
 	border-radius: 10px;
@@ -87,19 +92,23 @@ textarea:focus {
 	justify-content: space-between;
 }
 
+/* Delete icon styles */
 .delete-icon {
 	cursor: pointer;
 }
 
+
+/* Search bar styling */
 .search {
 	display: flex;
 	align-items: center;
 	background-color: rgb(233, 233, 233);
-	border-radius: 10px;
+	border-radius: 15px;
 	padding: 5px;
 	margin-bottom: 1.5em;
 }
 
+/* this search input blends the textbox with the outter container */
 .search input {
 	border: none;
 	background-color: rgb(233, 233, 233);
